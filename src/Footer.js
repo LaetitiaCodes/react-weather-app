@@ -16,7 +16,7 @@ export default function Footer() {
         <span> </span>
         by Laetitia Ganglmair hosted on{" "}
         <a
-          href="https://github.com/LaetitiaCodes/react-weather-app"
+          href="https://react-weather-app-by-laetitia.netlify.app"
           target="_blank"
           rel="noreferrer"
         >
