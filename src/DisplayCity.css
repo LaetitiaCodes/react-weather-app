@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@1,600&display=swap");
+
+.DisplayCity {
+  padding: 17px 5px;
+  border-radius: 5px;
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(87, 87, 87);
+  border: 2px solid rgba(165, 164, 164, 0.822);
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  left: -190px;
+  top: 40px;
+}

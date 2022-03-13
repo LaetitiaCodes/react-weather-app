@@ -1,0 +1,28 @@
+import React from "react";
+import "./Footer.css";
+
+export default function Footer() {
+  return (
+    <div className="Footer">
+      {" "}
+      <footer className="container">
+        <a
+          href="https://github.com/LaetitiaCodes/react-weather-app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open-sourced code
+        </a>
+        <span> </span>
+        by Laetitia Ganglmair hosted on{" "}
+        <a
+          href="https://github.com/LaetitiaCodes/react-weather-app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Netlify
+        </a>
+      </footer>{" "}
+    </div>
+  );
+}

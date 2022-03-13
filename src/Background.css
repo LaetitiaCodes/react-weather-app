@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@1,600&display=swap");
+
+video {
+  width: 850px;
+  height: auto;
+  position: fixed;
+  top: 80px;
+  left: 5px;
+  right: 5px;
+  bottom: -30px;
+  z-index: -1;
+  margin: 0 auto;
+  display: block;
+  border: 1px dotted rgb(179, 179, 179);
+  border-radius: 10px;
+}

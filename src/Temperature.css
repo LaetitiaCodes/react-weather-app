@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@1,600&display=swap");
+
+.cityTemperature {
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(87, 87, 87);
+  border: 2px solid rgba(165, 164, 164, 0.822);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 44px;
+  padding: 17px 25px;
+  position: relative;
+  left: 250px;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-family: "Comfortaa";
+}
+#celsius,
+#fahrenheit {
+  position: relative;
+  left: 260px;
+  top: -25px;
+  font-family: "Comfortaa";
+}
+#celsius {
+  font-weight: 900;
+  font-family: "Comfortaa";
+}
+#celsius,
+#fahrenheit:hover {
+  cursor: pointer;
+}
