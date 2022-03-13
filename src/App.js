@@ -23,7 +23,7 @@ function App() {
           <div className="row text-center mb-0">
             {" "}
             <div className="col-sm-3 mt-4 mb-4">
-              <DisplayCity />{" "}
+              <DisplayCity defaultCity="Stockholm" />{" "}
             </div>{" "}
             <div className="col-sm-3 mt-4 mb-4" id="temperatureContainer">
               <Temperature />
