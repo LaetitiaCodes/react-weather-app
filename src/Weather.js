@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
-import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
@@ -30,10 +29,7 @@ export default function Weather(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
   }
-  function showWeatherFromButton(event) {
-    setCity(event.target.value);
-    search();
-  }
+
   function search() {
     const apiKey = "da8f5611cc0070b3da5f77e2e4864cee";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -43,9 +39,9 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="row">
-          <div className="col-sm-6">
-            <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-sm-6">
               <input
                 type="search"
                 placeholder="Enter your city, e.g. Stockholm"
@@ -56,31 +52,31 @@ export default function Weather(props) {
                 id="search-input"
                 onChange={handleCityChange}
               />
-
               <input type="submit" value="🔎" id="submit-data" />
-              <input type="submit" value="📍" id="current-location" />
-            </form>
-            <div className="Quicksearch">
-              {" "}
-              <button id="london-quicksearch" onClick={showWeatherFromButton}>
-                London
-              </button>
-              <button id="paris-quicksearch" onClick={showWeatherFromButton}>
-                Paris
-              </button>
-              <button id="vienna-quicksearch" onClick={showWeatherFromButton}>
-                Vienna
-              </button>
-            </div>
-            ;
-            <WeatherInfo data={weatherData} />
-            <WeatherForecast coordinates={weatherData.coordinates} />
-          </div>{" "}
-        </div>{" "}
+              <input type="submit" value="📍" id="current-location" />{" "}
+            </div>{" "}
+          </div>
+        </form>
+        <div className="Quicksearch">
+          {" "}
+          <button
+            id="london-quicksearch"
+            onClick={axios
+              .get(
+                `https://api.openweathermap.org/data/2.5/weather?q=London&appid=da8f5611cc0070b3da5f77e2e4864cee&units=metric`
+              )
+              .then(handleResponse)}
+          >
+            London
+          </button>
+          <button id="paris-quicksearch">Paris</button>
+          <button id="vienna-quicksearch">Vienna</button>
+        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
     search();
-    alert("Loading...");
+    return "Loading...";
   }
 }
