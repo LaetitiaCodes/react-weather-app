@@ -30,6 +30,18 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function searchLondonWeatherFast() {
+    setCity("London");
+    handleSubmit();
+  }
+  function searchParisWeatherFast() {
+    setCity("Paris");
+    handleSubmit();
+  }
+  function searchViennaWeatherFast() {
+    setCity("Vienna");
+    handleSubmit();
+  }
   function search() {
     const apiKey = "da8f5611cc0070b3da5f77e2e4864cee";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -59,18 +71,15 @@ export default function Weather(props) {
         </form>
         <div className="Quicksearch">
           {" "}
-          <button
-            id="london-quicksearch"
-            onClick={axios
-              .get(
-                `https://api.openweathermap.org/data/2.5/weather?q=London&appid=da8f5611cc0070b3da5f77e2e4864cee&units=metric`
-              )
-              .then(handleResponse)}
-          >
+          <button id="london-quicksearch" onClick={searchLondonWeatherFast}>
             London
           </button>
-          <button id="paris-quicksearch">Paris</button>
-          <button id="vienna-quicksearch">Vienna</button>
+          <button id="paris-quicksearch" onClick={searchParisWeatherFast}>
+            Paris
+          </button>
+          <button id="vienna-quicksearch" onClick={searchViennaWeatherFast}>
+            Vienna
+          </button>
         </div>
         <WeatherInfo data={weatherData} />
       </div>

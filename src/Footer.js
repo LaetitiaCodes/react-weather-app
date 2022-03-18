@@ -11,7 +11,7 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          Open-sourced code
+          Open-sourced code{" "}
         </a>
         by Laetitia Ganglmair hosted on{" "}
         <a
