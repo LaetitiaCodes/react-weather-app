@@ -65,7 +65,6 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
               <input type="submit" value="🔎" id="submit-data" />
-              <input type="submit" value="📍" id="current-location" />{" "}
             </div>{" "}
           </div>
         </form>
