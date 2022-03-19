@@ -24,17 +24,16 @@ export default function WeatherInfo(props) {
             className="weatherIcon"
           />
         </span>
-      </div>
-      <div className="CurrentWeather">
-        <div className="row">
-          <div className="row align-items-center">
-            <div className="col-sm-3">
+      </div>{" "}
+      <div className="row">
+        {" "}
+        <div className="row align-items-center">
+          <div className="col-sm-12">
+            <div className="CurrentWeather">
               <span className="CurrentTime">
-                <span>
-                  <FormattedDate date={props.data.date} />
-                </span>{" "}
-              </span>
-              <br />
+                Last updated:
+                <FormattedDate date={props.data.date} />
+              </span>{" "}
               <span id="weatherCondition">
                 <span className="text-capitalize">
                   {props.data.description}
@@ -44,7 +43,7 @@ export default function WeatherInfo(props) {
           </div>{" "}
         </div>
       </div>
-      <div className="col-sm-3">
+      <div className="col-sm-12">
         <div className="HumidityWind">
           <span id="humidity">
             Humidity: {Math.round(props.data.humidity)}%
