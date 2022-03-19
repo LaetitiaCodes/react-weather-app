@@ -15,13 +15,14 @@ export default function WeatherInfo(props) {
         <WeatherTemperature celsius={props.data.temperature} />
       </div>{" "}
       <div className="col-sm-6">
-        {" "}
-        <span>
+        <span className="DresscodeTipp">
           {" "}
-          <span className="DresscodeTipp">
-            No such thing as bad weather, only bad clothing!
-          </span>
-          <WeatherIcon code={props.data.icon} size={32} />
+          No such thing as bad weather, only bad clothing!{" "}
+          <WeatherIcon
+            code={props.data.icon}
+            size={20}
+            className="weatherIcon"
+          />
         </span>
       </div>
       <div className="CurrentWeather">

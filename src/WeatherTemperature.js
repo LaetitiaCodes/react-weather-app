@@ -19,17 +19,21 @@ export default function WeatherTemperature(props) {
   if (unit === "celsius") {
     return (
       <div className="row text-center mb-0">
-        <div className="col-sm-3 mt-4 mb-4" id="temperatureContainer">
-          <span className="cityTemperature" id="cityTemperature">
+        {" "}
+        <div className="col-sm-3">
+          {" "}
+          <span className="cityTemperature">
             {Math.round(props.celsius)}
-          </span>
-          <span id="celsius">
-            °C{" "}
-            <a href="/" onClick={showFahrenheit}>
-              <span id="fahrenheit">|°F</span>
-            </a>
-          </span>
-        </div>{" "}
+          </span>{" "}
+          <div className="unit">
+            <span id="celsius">
+              °C{" "}
+              <a href="/" onClick={showFahrenheit}>
+                <span id="fahrenheit">|°F</span>
+              </a>
+            </span>
+          </div>
+        </div>
       </div>
     );
   } else {
