@@ -30,17 +30,20 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  function searchLondonWeatherFast() {
+  function searchLondonWeatherFast(event) {
+    event.preventDefault();
     setCity("London");
-    handleSubmit();
+    search();
   }
-  function searchParisWeatherFast() {
+  function searchParisWeatherFast(event) {
+    event.preventDefault();
     setCity("Paris");
-    handleSubmit();
+    search();
   }
-  function searchViennaWeatherFast() {
+  function searchViennaWeatherFast(event) {
+    event.preventDefault();
     setCity("Vienna");
-    handleSubmit();
+    search();
   }
   function search() {
     const apiKey = "da8f5611cc0070b3da5f77e2e4864cee";
@@ -50,37 +53,39 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="Weather">
-        <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-sm-6">
-              <input
-                type="search"
-                placeholder="Enter your city, e.g. Stockholm"
-                size="30"
-                className="Search"
-                autoFocus="on"
-                autoComplete="off"
-                id="search-input"
-                onChange={handleCityChange}
-              />
-              <input type="submit" value="🔎" id="submit-data" />
-            </div>{" "}
+      <div className="container">
+        <div className="Weather">
+          <form onSubmit={handleSubmit}>
+            <div className="row">
+              <div className="col-sm-6">
+                <input
+                  type="search"
+                  placeholder="Enter your city, e.g. Stockholm"
+                  size="30"
+                  className="Search"
+                  autoFocus="on"
+                  autoComplete="off"
+                  id="search-input"
+                  onChange={handleCityChange}
+                />
+                <input type="submit" value="🔎" id="submit-data" />
+              </div>{" "}
+            </div>
+          </form>
+          <div className="Quicksearch">
+            {" "}
+            <button id="london-quicksearch" onClick={searchLondonWeatherFast}>
+              London
+            </button>
+            <button id="paris-quicksearch" onClick={searchParisWeatherFast}>
+              Paris
+            </button>
+            <button id="vienna-quicksearch" onClick={searchViennaWeatherFast}>
+              Vienna
+            </button>
           </div>
-        </form>
-        <div className="Quicksearch">
-          {" "}
-          <button id="london-quicksearch" onClick={searchLondonWeatherFast}>
-            London
-          </button>
-          <button id="paris-quicksearch" onClick={searchParisWeatherFast}>
-            Paris
-          </button>
-          <button id="vienna-quicksearch" onClick={searchViennaWeatherFast}>
-            Vienna
-          </button>
+          <WeatherInfo data={weatherData} />
         </div>
-        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
