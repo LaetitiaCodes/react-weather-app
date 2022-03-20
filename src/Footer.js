@@ -7,7 +7,7 @@ export default function Footer() {
       {" "}
       <footer className="container">
         <a
-          href="https://github.com/LaetitiaCodes/react-weather-app"
+          href="https://github.com/LaetitiaCodes/react-weather-app.git"
           target="_blank"
           rel="noreferrer"
         >
@@ -15,7 +15,7 @@ export default function Footer() {
         </a>
         by Laetitia Ganglmair hosted on{" "}
         <a
-          href="https://react-weather-app-by-laetitia.netlify.app"
+          href="https://react-weather-by-laetitia.netlify.app/"
           target="_blank"
           rel="noreferrer"
         >
