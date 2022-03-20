@@ -31,9 +31,9 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  function searchLondonWeatherFast(event) {
+  function searchVäxjöWeatherFast(event) {
     event.preventDefault();
-    setCity("London");
+    setCity("Växjö");
     search();
   }
   function searchParisWeatherFast(event) {
@@ -75,8 +75,8 @@ export default function Weather(props) {
           </form>
           <div className="Quicksearch">
             {" "}
-            <button id="london-quicksearch" onClick={searchLondonWeatherFast}>
-              London
+            <button id="växjö-quicksearch" onClick={searchVäxjöWeatherFast}>
+              Växjö
             </button>
             <button id="paris-quicksearch" onClick={searchParisWeatherFast}>
               Paris

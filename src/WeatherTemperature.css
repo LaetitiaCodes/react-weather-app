@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@1,600&display=swap");
 .unit {
-  position: relative;
-  left: 400px;
-  bottom: 192px;
+  position: fixed;
+  left: 700px;
+  top: 200px;
   font-family: "Comfortaa";
   font-weight: 900;
 }
 .cityTemperature {
+  max-width: fit-content;
   font-size: 35px;
   font-weight: bold;
   color: rgb(87, 87, 87);
