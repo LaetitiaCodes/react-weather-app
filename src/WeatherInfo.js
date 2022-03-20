@@ -7,14 +7,14 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="row">
-        <div className="col-sm-3 mt-4 mb-4">
+        <div className="col-sm-4 mt-4 mb-4">
           <span className="cityName">{props.data.city}</span>
         </div>{" "}
       </div>{" "}
-      <div className="col-sm-3 mt-4 mb-4" id="temperatureContainer">
+      <div className="col-sm-4 mt-4 mb-4 " id="temperatureContainer">
         <WeatherTemperature celsius={props.data.temperature} />
       </div>{" "}
-      <div className="col-sm-6">
+      <div className="col-sm-4">
         <span className="DresscodeTipp">
           {" "}
           No such thing as bad weather, only bad clothing!{" "}
