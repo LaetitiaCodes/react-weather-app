@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@1,600&display=swap");
 
 .Footer {
-  margin: 0 auto;
+  position: relative;
+  margin-top: 50px;
   font-size: 9pt;
   font-family: "Comfortaa";
 }
