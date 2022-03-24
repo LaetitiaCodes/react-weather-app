@@ -31,19 +31,19 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  function searchVäxjöWeatherFast(event) {
+  function searchNYWeatherFast(event) {
     event.preventDefault();
-    setCity("Växjö");
+    setCity("New York");
     search();
   }
-  function searchParisWeatherFast(event) {
+  function searchBrisbaneWeatherFast(event) {
     event.preventDefault();
-    setCity("Paris");
+    setCity("Brisbane");
     search();
   }
-  function searchViennaWeatherFast(event) {
+  function searchLondonWeatherFast(event) {
     event.preventDefault();
-    setCity("Vienna");
+    setCity("London");
     search();
   }
   function search() {
@@ -75,14 +75,17 @@ export default function Weather(props) {
           </form>
           <div className="Quicksearch">
             {" "}
-            <button id="växjö-quicksearch" onClick={searchVäxjöWeatherFast}>
-              Växjö
+            <button id="new-york-quicksearch" onClick={searchNYWeatherFast}>
+              New York
             </button>
-            <button id="paris-quicksearch" onClick={searchParisWeatherFast}>
-              Paris
+            <button
+              id="brisbane-quicksearch"
+              onClick={searchBrisbaneWeatherFast}
+            >
+              Brisbane
             </button>
-            <button id="vienna-quicksearch" onClick={searchViennaWeatherFast}>
-              Vienna
+            <button id="london-quicksearch" onClick={searchLondonWeatherFast}>
+              London
             </button>
           </div>
           <WeatherInfo data={weatherData} />
