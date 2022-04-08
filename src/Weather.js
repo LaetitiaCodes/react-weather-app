@@ -31,21 +31,6 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  function searchNYWeatherFast(event) {
-    event.preventDefault();
-    setCity("New York");
-    search();
-  }
-  function searchBrisbaneWeatherFast(event) {
-    event.preventDefault();
-    setCity("Brisbane");
-    search();
-  }
-  function searchLondonWeatherFast(event) {
-    event.preventDefault();
-    setCity("London");
-    search();
-  }
   function search() {
     const apiKey = "ae9eba26b8679126fcce507a3677b3eb";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -73,21 +58,6 @@ export default function Weather(props) {
               </div>{" "}
             </div>
           </form>
-          <div className="Quicksearch">
-            {" "}
-            <button id="new-york-quicksearch" onClick={searchNYWeatherFast}>
-              New York
-            </button>
-            <button
-              id="brisbane-quicksearch"
-              onClick={searchBrisbaneWeatherFast}
-            >
-              Brisbane
-            </button>
-            <button id="london-quicksearch" onClick={searchLondonWeatherFast}>
-              London
-            </button>
-          </div>
           <WeatherInfo data={weatherData} />
           <WeatherForecast coordinates={weatherData.coordinates} />
         </div>

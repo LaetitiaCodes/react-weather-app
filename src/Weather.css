@@ -1,28 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@1,600&display=swap");
 
-.Quicksearch input {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 4px;
-  border: 2px solid rgb(179, 179, 179);
-}
-
-.Quicksearch button {
-  border: 1px solid #b4b0b0;
-  border-radius: 5px;
-  margin: 5px 10px 30px 0px;
-  background-color: rgba(245, 245, 245, 0.8);
-  padding: 2px 20px;
-  font-size: 11px;
-  transition: all 200ms ease-in;
-  text-align: center;
-  line-height: normal;
-  font-family: "Comfortaa";
-}
-.Quicksearch button:hover {
-  background: white;
-  cursor: pointer;
-}
-
 #weatherCondition {
   text-transform: capitalize;
 }
@@ -44,6 +21,7 @@
 }
 .cityName {
   padding: 17px 5px;
+
   border-radius: 5px;
   font-size: 35px;
   font-weight: bold;
@@ -92,6 +70,7 @@
   font-size: 14px;
   padding: 4px 10px;
   margin-top: 90px;
+  margin-bottom: 50px;
 }
 
 #submit-data {
